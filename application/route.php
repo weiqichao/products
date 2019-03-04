@@ -9,13 +9,37 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-return [
-    '__pattern__' => [
-        'name' => '\w+',
-    ],
-    '[hello]'     => [
-        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
-        ':name' => ['index/hello', ['method' => 'post']],
-    ],
+use think\Route;
 
-];
+/**
+ * 前端路由
+ * 陈绪
+ */
+Route::group("",[
+
+    /**
+     * 前端首页
+     * 陈绪
+     */
+    "/$"=>"index/index/index",
+
+]);
+
+
+/**
+ * 后台路由
+ * 陈绪
+ */
+Route::group("admin",[
+
+    /*后台首页*/
+    "/$"=>"admin/Index/index",
+
+    /*后台登录*/
+    "login"=>"admin/Login/index",
+
+
+]);
+
+
+

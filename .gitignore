@@ -1,5 +1,9 @@
 .idea
-composer.lock
-*.log
+composer
+.lock
+*
+.log
 thinkphp
- vendor
+vendor
+
+
